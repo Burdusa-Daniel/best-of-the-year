@@ -20,32 +20,34 @@ public class IndexController {
         model.addAttribute("name", nome);
         return "index";
     }
+
     @GetMapping("/movies")
-    public String movieList(Model model){
+    public String movieList(Model model) {
         List<Movie> movieList = getBestMovies();
-        model.addAttribute("movies",movieList);
+        model.addAttribute("movies", movieList);
         return "movies-list";
     }
+
     @GetMapping("/songs")
-    public String songList(Model model){
+    public String songList(Model model) {
         List<Song> songList = getBestSongs();
-        model.addAttribute("songs",songList);
+        model.addAttribute("songs", songList);
         return "songs-list";
     }
 
     private List<Movie> getBestMovies() {
         List<Movie> movies = new ArrayList<>();
-        movies.add(new Movie(01,"pippo"));
-        movies.add(new Movie(02,"pippo"));
-        movies.add(new Movie(03,"pippo"));
+        movies.add(new Movie(01, "pippo"));
+        movies.add(new Movie(02, "pippo"));
+        movies.add(new Movie(03, "pippo"));
         return movies;
     }
 
-    private  List<Song> getBestSongs() {
-        List<Song> songs  = new ArrayList<>();
-        songs.add(new Song(04,"pippo"));
-        songs.add(new Song(05,"pippo"));
-        songs.add(new Song(06,"pippo"));
+    private List<Song> getBestSongs() {
+        List<Song> songs = new ArrayList<>();
+        songs.add(new Song(04, "pippo"));
+        songs.add(new Song(05, "pippo"));
+        songs.add(new Song(06, "pippo"));
         return songs;
     }
 }
