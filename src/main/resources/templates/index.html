@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>best of the year</title>
+</head>
+<body>
+<p th:text="'best of the year by ' + ${name}"> </p>
+<a th:href="@{/movies}">movies</a>
+<a th:href="@{/songs}">songs</a>
+</body>
+</html>
